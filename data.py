@@ -10,7 +10,6 @@ def get_results(data):
 def get_lexical_entries(data):
     lex = data['lexicalEntries']
     for i in range(len(lex)):
-        # TODO -- go from here for pronunciation
         get_entry_first(lex[i])
         print(get_lexical_category(lex[i]))
         get_phrases(lex[i])
@@ -74,40 +73,6 @@ def get_synonym(data):
         print(dat[i]['text'])
 
 
-# def get_sens(data, id):
-#     print()
-#     print(id)
-#     # print(data)
-#     sens = data['entries'][id]['entries']
-#     # print(sens)
-#     print()
-#     for i in range(len(sens)):
-#         print("sens -- sens[i]")
-#         print(" -- "*20, i)
-#         get_def(sens, i)
-
-
-# def get_def(data, id):
-#     print()
-#     print(id)
-#     # print(data)
-#     deff = data[id]['definitions']
-#     print(deff)
-#     print()
-#     for i in range(len(deff)):
-#         print("data -- data[i]")
-#         print(" -- "*20, i)
-#         get_meaning(deff, i)
-
-
-# def get_meaning(data, id):
-#     print()
-#     print(id)
-#     mean = data[id]
-#     print(mean)
-#     print()
-
-
 def get_definition(word_id):
     import os
     print("*"*10 + "inside func" + "*"*10)
@@ -133,23 +98,7 @@ def get_definition(word_id):
     print("*"*10 + "end of func" + "*"*10)
 
     print("\nresults:\n")
-    # get_results(results)  # loop 1
-    # for entry in range(len(entries)):
-    #     dat = entries[entry]
-    #     get_entry_first(dat, entry)
-
-    # print("num of entries --->", len(entries))
-
-    # print("\ndefinitions:\n")
-    # for defs in range(len(definitions)):
-    #     print(definitions[defs])
-
-    # print("num of definitions --->", len(definitions))
-    # print("\nsynonyms:\n")
-    # for syn in range(len(synonyms)):
-    #     print(synonyms[syn])
-
-    # print("num of synonyms --->", len(synonyms))
+    get_results(results)  # loop 1
 
 
 get_definition('incredible')
